@@ -28,5 +28,15 @@ getCardNames(`${__dirname}/deck_test.txt`)
   });
 
 export function receiveDownloadProgress(progress: number) {
-  console.log(`${(progress * 100).toFixed(0)}%`);
+  //const progressInPercentage = `${(progress * 100).toFixed(0)}%`;
+  
+  let percentage: number = parseInt((progress * 100).toFixed(0));
+  let oneQuarter: number = percentage / 4;
+  let uiLoading: string = '[.........................]';
+  
+  for (let i = 0; i < oneQuarter; i++) {
+    uiLoading = uiLoading.replace('.', '#');
+  }
+
+  process.stdout.write(`Baixando: ${uiLoading}${'\r'}`);
 }
