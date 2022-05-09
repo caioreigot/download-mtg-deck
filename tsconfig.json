@@ -1,0 +1,13 @@
+{
+  "target": "es9",
+  "module": "commonjs",
+  "rootDir": "./",
+  "moduleResolution": "node",
+  "strict": true,
+  "resolveJsonModule": true,
+  "compilerOptions": {
+    "outDir": "dist",
+    "noImplicitAny": true
+  },
+  "include": ["src/**/*"]
+}
