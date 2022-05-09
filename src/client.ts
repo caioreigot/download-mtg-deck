@@ -28,7 +28,7 @@ getCardNames(`${__dirname}/deck_test.txt`)
   });
 
 export function receiveDownloadProgress(progress: number) {
-  //const progressInPercentage = `${(progress * 100).toFixed(0)}%`;
+  const progressInPercentage = `${(progress * 100).toFixed(0)}%`;
   
   let percentage: number = parseInt((progress * 100).toFixed(0));
   let oneQuarter: number = percentage / 4;
@@ -38,5 +38,12 @@ export function receiveDownloadProgress(progress: number) {
     uiLoading = uiLoading.replace('.', '#');
   }
 
-  process.stdout.write(`Baixando: ${uiLoading}${'\r'}`);
+  console.clear();
+
+  if (percentage !== 100) {
+    console.log(`[${progressInPercentage}] Baixando imagens...`);
+    console.log(uiLoading);
+  } else {
+    console.log('Imagens baixadas com sucesso!');
+  }
 }
