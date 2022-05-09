@@ -16,8 +16,8 @@ getCardNames(`${__dirname}/deck_test.txt`)
   .then(getCardsImage)
   .catch(err => {
     if (err.response.status && err.response.status === HttpStatusCode.NOT_FOUND) {
-      // TODO: Mostrar pro usuário que há um nome inválido no arquivo do deck
-      // TODO: Obs: importante mostrar o err.response.data.details pro usuário
+      // Há um nome inválido no arquivo do deck
+      // Obs: importante mostrar o err.response.data.details pro usuário
       console.warn(`${ErrorMessages.ERR6} Mensagem do erro: ${err}`);
       console.warn(`Detalhes do erro na API: ${err.response.data.details}`);
       
