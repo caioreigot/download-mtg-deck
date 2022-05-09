@@ -1,4 +1,4 @@
-import ICard from './commons/interfaces/ICardApi';
+import ICard from './commons/interfaces/ICard';
 import axios, { AxiosError } from 'axios';
 import { ErrorMessages } from './commons/enums/errorMessages';
 

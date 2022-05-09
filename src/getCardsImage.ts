@@ -1,5 +1,5 @@
 import downloadImage from "./downloadImage";
-import ICard from "./commons/interfaces/ICardApi";
+import ICard from "./commons/interfaces/ICard";
 import { CARD_IMAGES_DIR } from "./config";
 import { receiveDownloadProgress } from "./client";
 import { ImageExtensions } from "./commons/enums/imageExtensions";
