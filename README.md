@@ -1,7 +1,7 @@
 # Download MTG Deck
 ## API usada: <a href="https://scryfall.com/docs/api">Scryfall</a>
 ### O que o código faz?
-O funcionamento se resume em funções:
+O funcionamento se resume em 3 funções:
 * <strong>getCardNames</strong>: Recebe de parâmetro o caminho absoluto de um arquivo .txt. Ele lerá este arquivo de texto e extrairá os nomes das cartas escritos nele (é necessário ter apenas um nome por linha). Obs: eles podem conter uma numeração antes de cada nome indicando quantas cartas daquela há no deck, o código irá lidar com isso (há um <strong>deck_test.txt</strong> no repositório que serve de modelo). Por fim, a função retorna um array de strings, que correspondem ao nome de cada carta extraída do arquivo.
 
 * <strong>getCardsObject</strong>: Recebe de parâmetro o retorno da função citada acima, ou seja, um array de strings. A função irá percorrer este array e para cada string (cada nome de carta) irá fazer uma requisição GET à API (citada no começo deste README), que irá responder com um objeto, contendo informações sobre esta carta, como por exemplo, seu nome, sua URL para download de imagens, seu custo de mana, entre muitos outros. A função irá retornar um array de objetos ICard (/src/commons/interfaces/ICard.ts).
