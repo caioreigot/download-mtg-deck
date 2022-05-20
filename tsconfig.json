@@ -5,8 +5,7 @@
     "resolveJsonModule": true,
     "moduleResolution": "node",
     "strict": true,
-    "rootDir": "./",
+    "rootDir": "./src",
     "outDir": "dist"
-  },
-  "include": ["src/**/*"]
+  }
 }
