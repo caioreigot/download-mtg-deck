@@ -1,13 +1,12 @@
 {
-  "target": "es9",
-  "module": "commonjs",
-  "rootDir": "./",
-  "moduleResolution": "node",
-  "strict": true,
-  "resolveJsonModule": true,
   "compilerOptions": {
-    "outDir": "dist",
-    "noImplicitAny": true
+    "target": "es2019",
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "rootDir": "./",
+    "outDir": "dist"
   },
   "include": ["src/**/*"]
 }
