@@ -4,6 +4,7 @@
   "description": "",
   "main": "/dist/src/client.js",
   "scripts": {
+    "build": "rm -rf dist && tsc && cp ./src/deck_test.txt ./dist",
     "start": "rm -rf dist && tsc && cp ./src/deck_test.txt ./dist && node dist/client.js"
   },
   "keywords": [],
