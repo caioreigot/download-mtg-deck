@@ -18,11 +18,12 @@ export default async function getCardsObject(
 
   return new Promise((resolve, reject) => {
 
-    const cardObjects: ICard[]= [];
+    const cardObjects: ICard[] = [];
     const apiBase = 'https://api.scryfall.com/cards/named?fuzzy=';
   
-    /* Se o array "cardsName" estiver vazio */
+    // Se o array "cardsName" estiver vazio
     if (!cardsName.length) {
+      console.warn('Array passado para "getCardsObject" está vazio.');
       resolve([]);
     }
   
@@ -48,7 +49,7 @@ export default async function getCardsObject(
             reject(err);
           });
         
-        /* Na ultima iteração, resolver a promise */
+        // Na ultima iteração, resolver a promise
         if (i == cardsName.length - 1) {
           resolve(cardObjects);
         }

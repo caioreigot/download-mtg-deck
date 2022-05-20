@@ -9,7 +9,7 @@ export default async function downloadImage(
   imageUrl: string,
   nameToSave: string
 ): Promise<void> {
-  /* Cria a pasta especificada caso ela não exista */
+  // Cria a pasta especificada caso ela não exista
   if (!fs.existsSync(pathToDownload)) {
     fs.mkdirSync(pathToDownload, { recursive: true });
   }

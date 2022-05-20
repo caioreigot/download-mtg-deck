@@ -6,9 +6,9 @@ import { HttpStatusCode } from './commons/enums/httpStatusCode';
 
 /* 
   Fluxo do código:
-  Pegar todos os nomes das cartas dentro do deck importado (txt)
-  Pegar o objeto da API dessas cartas
-  Baixar a imagem dessas cartas, caso não exista
+  Pega todos os nomes das cartas dentro do deck importado (txt)
+  Pega o objeto dessas cartas através da API, usando os seus nomes
+  Baixa a imagem das cartas, caso não exista
 */
   
 getCardNames(`${__dirname}/deck_test.txt`)
@@ -16,7 +16,7 @@ getCardNames(`${__dirname}/deck_test.txt`)
   .then(getCardsImage)
   .catch(err => {
     if (err.response.status && err.response.status === HttpStatusCode.NOT_FOUND) {
-      // Há um nome inválido no arquivo do deck
+      // Se o código passou neste if, há um nome inválido no arquivo do deck
       // Obs: importante mostrar o err.response.data.details pro usuário
       console.warn(`${ErrorMessages.ERR6} Mensagem do erro: ${err}`);
       console.warn(`Detalhes do erro na API: ${err.response.data.details}`);

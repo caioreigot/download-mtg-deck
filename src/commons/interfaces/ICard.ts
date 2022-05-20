@@ -1,3 +1,5 @@
+import IPart from "./IPart"
+
 export default interface ICard {
   object: string,
   id: string,
@@ -28,6 +30,7 @@ export default interface ICard {
   colors: string[],
   color_identity: string[],
   keywords: string[],
+  all_parts: IPart[],
   legalities: {
     standard: string,
     future: string,
