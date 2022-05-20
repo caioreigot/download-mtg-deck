@@ -25,7 +25,7 @@ export default async function getCardNames(
     return content.replace(/^[0-9]+\s+/gm, '').split('\n')
   } catch(err) {
     throw new Error(
-      `${ErrorMessages.ERR2} Mensagem do erro: ${err.message}`
+      `${ErrorMessages.ERR2} Erro: ${err}`
     );
   }
 }
